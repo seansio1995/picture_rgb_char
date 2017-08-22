@@ -1,5 +1,7 @@
 from PIL import Image
-char_string = 'abcdefghijklmnopqrstuvwxyz'
+#char_string = 'abcdefghijklmnopqrstuvwxyz'
+#
+char_string="人生自古谁无死留取丹心照汗青感统恶鬼争高下不向霸王让寸分"
 
 def rgb2char(r,g,b):
     length=len(char_string)
