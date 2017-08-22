@@ -24,7 +24,7 @@ def preprocess(image_path,delta=100):
         max_val=width
 
 
-    scale=max_val/100
+    scale=max_val/delta
 
     width, height=int(width/scale), int(height/scale)
 
@@ -44,4 +44,12 @@ def img_to_char(img_object, save_path):
         line=""
         for j in range(width):
             line+=rgb2char(*img_object.getpixel((j,i)))
-        text
+        text+=line+"\n"
+
+
+    with open(save_path,"w+",encoding='utf-8') as f:
+        f.write(text)
+
+
+img_object=preprocess("test.jpg")
+img_to_char(img_object,"test.txt")
